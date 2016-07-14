@@ -1,0 +1,74 @@
+<html >
+<head >
+    <title >Data</title >
+</head >
+<body >
+<div >
+    <header id = "hd" >
+        Data Handling
+    </header >
+    <link rel = "stylesheet" type = "text/css" href = "data.css" >
+    <a style="float: right" href = "https://localhost:8000/hackreactorproject.html">Back To Project Page</a>
+</div >
+    <div id = "frm" >
+        <form class = "dt" >
+            <h2>Customer Details</h2 ><br >
+            <div id = "dd" >
+            <label >Name</label >
+            <select id = "Name" onchange = "displayValues();" >
+                <option value = ""></option>
+
+            </select ><br ><br >
+            <label >DOB</label ><input type = "text" placeholder = "dob" id = "DOB" ><br ><br >
+            <label >Address</label ><input type = "text" placeholder = "address" id = "address" ><br ><br >
+            <label >City</label ><input type = "text" placeholder = "city" id = "city" ><br ><br >
+            <label >State</label ><input type = "text" placeholder = "state" id = "state" ><br ><br >
+            <label >Zip Code</label ><input type = "text" placeholder = "94538" id = "zipcode" ><br ><br >
+            <label >Contact Number</label ><input type = "text" placeholder = "000-000-0000"
+                                                  id = "contactno" ><br ><br >
+            <label >Mail Id</label ><input type = "text" placeholder = "abc@example.com" id = mailid ><br ><br >
+            <br >
+                </div >
+        </form >
+    </div >
+    <div id = "search" >
+        <div id = "criteria" >
+            <p >Criteria</p >
+            <select id = "option" >
+                <option value = "Name" >Name</option >
+                <option value = "Address" >Address</option >
+                <option value = "DOB" >DOB</option >
+                <option value = "PhoneNumber" >PhoneNumber</option >
+                <option value = "MailId" >MailId</option >
+                <option value = "City" >City</option >
+                <option value = "State" >State</option >
+                <option value = "Zipcode" >Zipcode</option >
+            </select >
+            <input type = "text" placeholder = "search" id = "searchvalue" >
+            <input type = "button" value = "Search" id = "searchbutton" onclick = "displayResults();" >
+            <br ><br >
+        </div >
+        <div id = "searchresults" >
+            <p >SearchResults</p >
+            <table >
+                <tr >
+                    <th >Name</th >
+                    <th >DOB</th >
+                    <th >Address Line1</th >
+                    <th >Address Line2</th >
+                    <th >City</th >
+                    <th >State</th >
+                    <th >Zipcode</th >
+                    <th >PhoneNumber</th >
+                    <th >MailId</th >
+                    </td>
+                    <tbody id = "results" >
+                    </tbody >
+                </tr>
+            </table >
+        </div >
+    </div >
+
+<script src = "data.js" ></script >
+</body >
+</html >

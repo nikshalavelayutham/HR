@@ -1,0 +1,92 @@
+#hd {
+    background-color: black;
+    color: white;
+    font-family: Algerian;
+    font-size: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+#frm {
+    margin: 50px;
+    border: 1px solid black;
+}
+
+.dt {
+    margin: 10px
+}
+
+.dt label {
+    float: left;
+    margin-left: 35%;
+    margin-right: 20px;
+}
+
+.dt input {
+    float: right;
+    margin-right: 34.7%;
+}
+
+#v {
+    float: right;
+    margin-left: 50px;
+    margin-right: 675px;
+}
+
+#dd {
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#search {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+    display: flex;
+}
+
+#criteria {
+    margin: 2px;
+    border: 1px solid black;
+    width: 38%;
+    float: left;
+}
+
+#searchresults {
+    margin: 2px;
+    border: 1px solid black;
+    float: right;
+    width: 62%;
+}
+
+#option {
+    float: left;
+    margin-left: 30px;
+
+}
+
+#searchvalue {
+    margin-left: 30px;
+}
+
+#searchbutton {
+    margin-left: 30px;
+}
+
+table {
+    width: 99%;
+    margin: 4px;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px dashed black;
+}
+#name{
+    float:left;
+    margin-left:16.2%;
+    width:10%;
+}

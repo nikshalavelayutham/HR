@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brick Checkout</title>
+    <meta name = "google-signin-client_id"
+          content = "314035108873-4metognja96266m14vd4c93lvlne55ag.apps.googleusercontent.com">
+    <link rel = "stylesheet" type = "text/css" href = "checkout.css">
+</head>
+
+<body style = "background-color: #f2f2f2">
+<div id = "hd">
+
+    <header>Sakthi Sarveswara Brick Checkout
+    </header>
+
+</div>
+<div style="float: right"> <a href = "#" onclick = "signOut();">Sign out</a> </div>
+<div id = "cont">
+    <section id = "prd">
+
+        <!-- Product Details Section -->
+        <div id = "pd">
+            <div>
+                <h1>Product Details</h1>
+                <p>
+                    We Use Fired Bricks
+                    The Bricks here are manufactured by both man power and machine power<br>
+                    The types of fired bricks we sell in our industry are<br>
+                    <ul>
+                        <li>Wire Cut brick</li>
+                        <li>Moulded Brick</li>
+                    </ul>
+                    Wire Cut bricks are manufactured by machines.<br>
+                    Moulded bricks are manufactured manually.
+                </p>
+            </div>
+            <form class = "pr" id = "pdr">
+                <label>Price Per Brick</label><input class = "pi" type = "text" id = "price" value = 6.15 readonly>
+                <div style = "float:left">USD</div>
+                <br><br>
+                <label>Quantity</label><input class = "pi" type = "number" id = "quantitysel" value = 100
+                                              step = "100" min = "100" max = "100000" ><br><br>
+            </form>
+            <br><br><br><br>
+        </div>
+    </section>
+
+    <section id = "add">
+        <!--Shiiping Address Section -->
+        <div id = "adr">
+
+            <form class = "ad">
+                <div><p>Shipping Address</p></div>
+                <label>First Name</label> <input type = "text" placeholder = "First Name" id = "FN"><br><br>
+                <label>Last Name </label> <input type = "text" placeholder = "Last Name" id = "LN"><br><br>
+                <label>Address Line1</label> <input type = "text" placeholder = "Address Line1" id = "A1"><br><br>
+                <label>Address Line2</label> <input type = "text" placeholder = "Address Line2" id = "A2"><br><br>
+                <label>Contact Number</label> <input type = "tel" placeholder = "Tel-number" id = "Tn"
+                                                     onkeypress = "return isNumber(event)"><br><br>
+                <label>ZipCode</label><input type = "text" placeholder = "94505" id = "Zp"
+                                             onkeypress = "return isNumber(event)"><br><br>
+                <label>State</label>
+                <select id = "state">
+                    <option value = ""></option>
+                    <option value = "California">California</option>
+                    <option value = "Washington">Washington</option>
+                    <option value = "Alaska">Alaska</option>
+                    <option value = "Texas">Texas</option>
+                    <option value = "Florida">Florida</option>
+                    <option value = "New Jersey">New Jersey</option>
+                    <option value = "Arizona">Arizona</option>
+                </select><br><br>
+                <label>City</label><input type = "text" placeholder = "eg:Fremont" id = "ct"><br><br>
+            </form>
+
+        </div>
+
+        <!--Payment details Section-->
+        <div id = "paymentdiv">
+            <form class = "paymentform">
+                <div><p>Payment Details</p></div>
+                <div class = "cn">
+                    Choose Type Of Card<br>
+
+                    <input type = "radio" value = "Visa" name = "cardtype" id = "visa" checked>Visa</input><br><br>
+                    <input type = "radio" value = "Mastercard" name = "cardtype" id = "mastercard">Mastercard
+                    </input></div>
+                <br><br>
+                <label>Mode Of Payment</label>
+                <select id = "modeofpayment">
+                    <option value = "Debit">Debit</option>
+                    <option value = "Credit">Credit</option>
+                </select><br><br>
+                <label>Name On Card</label><input type = "text" placeholder = "Name" id = "nameoncard"/><br><br>
+                <label>Creditcard Number</label><input type = "text" placeholder = "xxxx xxxx xxxx xxxx" id = "cardnum"
+                                                       onkeypress = "return isNumber(event)"><br><br>
+                <label>CVV</label><input type = "text" placeholder = "cvv" id = "cvv"
+                                         onkeypress = "return isNumber(event)"><br><br>
+                <label>Expiration Date</label><input type = "month" id = "cardexpiry" name = "monthyr"><br><br>
+            </form>
+
+        </div>
+    </section>
+
+    <!--Order Summary Section-->
+    <aside id = "po">
+        <div id = "pod">
+            <h2>Order Summary</h2><br>
+            <div class = "table">
+                <div class = "row">
+                    <div class = "cell">Price Per Brick</div>
+                    <div id = "priceperunit" class = "cell">0</div>
+                </div>
+                <div class = "row">
+                    <div class = "cell">Quantity</div>
+                    <div id = "quantity" class = "cell">0</div>
+                </div>
+                <div class = "row">
+                    <div class = "cell">Price</div>
+                    <div id = "priceofallbricks" class = "cell">0</div>
+                </div>
+                <div class = "row">
+                    <div class = "cell">Tax(10%)</div>
+                    <div id = "tax" class = "cell">0</div>
+                </div>
+                <div class = "row">
+                    <div class = "cell">Shipping Charge</div>
+                    <div id = "shippingcharge" class = "cell">0</div>
+                </div>
+                <div class="row" id="tl">
+                    <div class = "cell">Total</div>
+                    <div id = "totalprice" class = "cell">0</div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+            <input type = "submit" value = "Place Order" id = "pe" onclick="placeOrder()">
+        </div>
+    </aside>
+</div>
+
+<script>
+
+    /**
+     * Function that initializes and loads the google API details
+     */
+    function onLoadCallback() {
+        gapi.load('auth2', function () {
+            gapi.auth2.init({
+                client_id: '314035108873-4metognja96266m14vd4c93lvlne55ag.apps.googleusercontent.com'
+            });
+        });
+    }
+
+    /**
+     * Function that asks the google API to signout and then redirects back to  Login Page
+     */
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            window.location.replace("https://localhost:8000/brickcheckout/login.html");
+        });
+    }
+</script>
+
+<!--Load the google provided platform.js, upon load call the onLoadCallback function -->
+<script src = "https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+<script src = "order.js"></script >
+</body>
+</html>

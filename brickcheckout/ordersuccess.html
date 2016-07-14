@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name = "google-signin-client_id"
+          content = "314035108873-4metognja96266m14vd4c93lvlne55ag.apps.googleusercontent.com">
+    <title>OrderSuccess</title>
+    <style>
+        p{
+            text-align: center;
+            font-size: 40px;
+            font-family: Algerian;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <P>Order Placed Successfully!!!</P>
+    <div style="text-align: center">
+        Your Order will be shipped shortly.
+        <br>
+        Thanks for shopping with us !
+        <br><br>
+        <a href = "#" onclick = "signOut();">Sign out</a>
+    </div>
+
+<script>
+
+    /**
+     * Function that initializes and loads the google API details
+     */
+    function onLoadCallback() {
+        gapi.load('auth2', function () {
+            gapi.auth2.init({
+                client_id: '314035108873-4metognja96266m14vd4c93lvlne55ag.apps.googleusercontent.com'
+            });
+        });
+    }
+
+    /**
+     * Function that asks the google API to signout and then redirects back to  Login Page
+     */
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            window.location.replace("https://localhost:8000/brickcheckout/login.html");
+        });
+    }
+</script>
+
+    <!--Load the google provided platform.js, upon load call the onLoadCallback function -->
+<script src = "https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+</body>
+</html>

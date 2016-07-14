@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+  <meta charset = "UTF-8" >
+  <title >Hack Reactor Project</title >
+  <style>
+    #left{
+      text-align:left;
+      width:50%;
+      border-right: 1px solid black;
+    }
+    #right{
+      text-align:left;
+      width:50%;
+    }
+      #projects{
+          display: flex;
+          margin:50px;
+      }
+      header{
+          text-align: center;
+          font-size: 30px;
+          font-family: Algerian;
+          margin:20px;
+      }
+      h1{
+          text-align:center;
+          font-style: italic;
+          text-decoration: underline;
+      }
+      li{
+          font-size: 20px;
+      }
+      p, pre {
+          text-align: center;
+      }
+      ul {
+          margin-left: 10%;
+      }
+  </style>
+</head >
+<body >
+<header>
+  HackReactor Project
+</header>
+<div id = "projects">
+<div id = "left">
+    <h1><a href = "https://localhost:8000/brickcheckout/login.html">Brick Check Out</a></h1>
+    <ul>
+        <li>Implementation of checkout page for sales of Bricks
+        </li>
+        <li>Basic Javascript with objects and callbacks
+        </li>
+        <li>
+            Integration with Google SignIn API
+        </li>
+        <li>
+            Client-Server Interaction
+        </li>
+    </ul>
+
+
+</div>
+<div id = "right">
+    <h1><a href = "https://localhost:8000/datahandling/data.html" >Data Handling</a></h1>
+    <ul>
+        <li>
+             Handling customer details
+        </li>
+        <li>
+            Higher Order Function - Map and Filter
+        </li>
+        <li>
+            Implemented methods instead of using inbuilt String library
+        </li>
+    </ul>
+
+</div>
+</div>
+<p>
+    Note: This project has client-server interaction so please start the server<br>
+    <pre>
+        cd &#60;Project Location&#62;\HR\
+        npm install
+        node &#60;Project Location&#62;\HR\hr.js
+    </pre>
+</p>
+</body >
+</html >

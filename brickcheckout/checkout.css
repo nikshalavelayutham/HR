@@ -1,0 +1,250 @@
+
+header {
+    color: firebrick;
+    text-align: center;
+}
+
+#cont {
+    display: inline-flex;
+    text-align: center;
+
+}
+
+#as {
+
+    text-align: right;
+    margin-right: 30px
+}
+
+a {
+    float: right;
+    font-size: initial;
+    font-family: icon;
+    margin-top: 18px;
+    margin-right: 25px;
+    font-style: normal;
+}
+
+header {
+    font-family: icon;
+    font-size: 35px;
+    font-style: italic;
+    text-align: center;
+}
+
+#hd {
+    background-color: black;
+    align-content: center;
+}
+
+#add {
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-left: -74px;
+    margin-right: 20px;
+    margin-top: 30px;
+    width: 390px;
+    background-color: #d9d9d9;
+
+}
+
+#adr {
+    border: 1px dashed grey;
+    margin: 20px;
+}
+
+.ad label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 118px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.ad input {
+    display: inline-block;
+    float: left;
+}
+
+.ad p {
+    text-align: center;
+    border-bottom: 1px dashed grey;
+}
+
+.ad div {
+    margin-top: -16px;
+}
+
+#paymentdiv {
+    border: 1px dashed grey;
+    margin: 20px;
+
+}
+
+.paymentform label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 140px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.paymentform input {
+    display: inline-block;
+    float: left;
+}
+
+.paymentform p {
+    text-align: center;
+    border-bottom: 1px dashed grey;
+}
+
+.paymentform div {
+    margin-top: -16px;
+}
+
+#prd {
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-left: 40px;
+    margin-right: 100px;
+    width: 392px;
+    margin-top: 30px;
+    background-color: #d9d9d9;
+}
+
+#pd {
+    border: 1px dashed grey;
+    margin: 20px;
+}
+
+.pr {
+    border: 1Px dashed grey;
+    margin: 20px;
+}
+
+.pr label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 140px;
+    text-align: left;
+    margin-left: 19px;
+}
+
+.pr input {
+    display: inline-block;
+    float: left;
+}
+
+#po {
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-right: 64px;
+    margin-top: 30px;
+    text-align: -moz-center;
+    width: 327px;
+    background-color: #d9d9d9;
+    padding-top: 125px;
+}
+
+.plc {
+    border: 1px dashed grey;
+    margin: 25px;
+}
+
+.plc label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 140px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.plc input {
+    display: inline-block;
+    float: left;
+}
+
+#tr {
+    margin: 25px;
+}
+
+.table {
+    display: table;
+    width: 220px;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding-left: 7px;
+    padding-right: 6px;
+    text-align: left;
+}
+
+#priceperunit {
+    text-align: right;
+}
+
+#quantity {
+    text-align: right;
+}
+
+#priceofallbricks {
+    text-align: right;
+}
+
+#tax {
+    text-align: right;
+}
+
+#shippingcharge {
+    text-align: right;
+}
+
+#totalprice {
+    text-align: right;
+}
+
+#tl {
+    font-weight: bold;
+}
+
+.cn {
+    text-align: left
+}
+
+.cn label {
+    float: left;
+}
+
+.cn input {
+    float: left;
+}
+
+.pi {
+    background-color: transparent;
+    border: 0;
+    width: 60px;
+}
+
+#pe {
+    background-color: #ff8c1a;
+    border-radius: 15px;
+    font-family: icon;
+    font-size: 18px;
+    width: 130px;
+}
+
+#state {
+    width: 146px;
+    margin-right: 59px;
+}
